@@ -26,6 +26,7 @@ public class Plant : MonoBehaviour
             Instantiate(crop, farmland.position, Quaternion.identity);
             inventory.useSeed(1);
             Debug.Log("Planted");
+            other.tag = "PlantedFarmLand";
         }
     }
 }

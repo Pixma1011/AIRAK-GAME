@@ -16,11 +16,14 @@ public class OpenShop : MonoBehaviour
         if (other.tag == "Player") {
 
             itemShopUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")
+            
+            Cursor.lockState = CursorLockMode.Locked;
         {
             itemShopUI.SetActive(false);
         }

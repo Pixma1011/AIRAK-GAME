@@ -11,6 +11,12 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     private Vector3 moveVector;
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        
+    }
+
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
